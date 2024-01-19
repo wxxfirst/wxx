@@ -1,0 +1,45 @@
+#练习一 Hello World打印
+print('Hello World')
+print("Hello World")
+print("""Hello World""")
+
+#练习二 数字求和
+num1=input("请输入第一个数字：")
+num2=input("请输入第二个数字：")
+print(f"两数之和为{num1+num2}")
+  
+#练习三 平方根
+#正数
+num3=float(input("请输入需开方的数字："))
+print(f"其平方根为{num3**0.5}")
+
+#负数、复数
+import cmath
+complex_num4=float(input("请输入需开方的数字："))
+complex_num4=cmath.sqrt(complex_num4)
+print('其平方根为{1:%f}+{2:%f}j'.format(complex_num4.real,complex_num4.imag))
+#？？？不太会用
+
+#练习四 二次方程
+int_num1=int(input("请输入a值："))
+int_num2=int(input("请输入b值："))
+int_num3=int(input("请输入c值："))
+float_num=float(int_num2**2-4*int_num1*int_num3)
+if float_num<0:
+    x1=None
+    x2=None
+elif float_num==0:
+#cmath不会用（明天学）
+
+#练习五 计算三角形的面积
+
+#练习六 计算圆的面积
+R=input("请输入圆的半径：")
+S=float(R**2*3.14)
+print(f"默认pi为3.14，该圆的面积为{S}")
+
+
+
+
+
+
