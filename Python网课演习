@@ -1,0 +1,380 @@
+#练习一 缩进演示
+
+i=0
+num=1
+while i<3:
+    num=num+i
+    i+=1
+print(num)
+
+
+#练习二 输入与输出语句演示
+
+num1=input("请问你的姓名是：")
+print(num1,end='')
+
+print("很高兴认识你！")
+
+print(num*100)
+
+print(f"我的名字是{num}")
+
+#练习三 变量
+num2=200
+def my_num():
+    global num2
+    num2=100
+    print(num2)
+my_num()
+print(num2)
+
+#练习四 数字类型
+#int 类型
+
+num3=int(input(),base=16)
+my_float=98.765
+my_float=int(my_float)
+print(num3,my_float)
+
+print("%d"%(num3))
+print("%4d"%(num3))
+print("%-4d"%(num3))
+
+#float 类型
+
+num4=10
+num4=float(num4)
+my_float1=67.78648678467568275
+print(num4)
+print("%6.3f"%(my_float1))
+
+#complex 类型
+
+my_complex=3+8j
+print(my_complex)
+
+#bool 类型
+
+my_bool=True
+print(my_bool)
+my_bool=False
+print(my_bool)
+
+
+#练习四 数据结构演示
+
+#字符串
+#定义
+#变量名=‘    ’
+str1='wenxinxin'
+# 变量名=”     “
+str2="wenxinxin"
+#变量名=”“”        “”“
+str3="""wenxinxin"""
+#转移字符/可以解除引号作用，使引号成为普通字符串
+str4="'/wenxinxin'/"
+# 强制类型转化：str（）
+str5=str(8)
+#格式化输出：%s
+print("%s"%(str1))
+print("%s"%(str2))
+print("%s"%(str3))
+print("%s"%(str4))
+print("%s"%(str5))
+#字符串拼接：str1+str2
+print(str1+str2)
+#字符串相关方法
+#下标索引——变量名.index(目标元素)——返回下标
+str10='I love learning Python!'
+num5=str10.index(' ')
+print(num5)
+#字符串替换——变量名.replace(原始字符串，替换后的字符串)
+str9=str10.replace(str10,"I love studying Python!")
+print(str9)
+#字符串分割——变量名.split(分割符，……)——原始字符串无修改影响
+words=str10.split(' ')
+for word in words:
+	print(word)
+#字符串全小写——变量名.lower()
+str11=str10.lower()
+print(str11)
+#字符串全大写——变量名.upper()
+str12=str10.upper()
+print(str12)
+#各个字符串首字母大写——变量名.title()
+str13=str10.title()
+str_new='   12 I love studying Python 12    '
+str_new1=str_new.strip()
+print(str_new1)
+#变量名.lstrip()-——删除字符串左边空格
+str_new2=str_new.lstrip()
+print(str_new2)
+#变量名.rstrip()——删除字符串右边空格
+str_new3=str_new.rstrip()
+print(str_new3)
+# 变量名.strip(“”)——删除字符串左、右两边的某元素
+str_new4=str_new1.strip('1')
+str_new5=str_new1.strip('12')
+print(str_new4)
+print(str_new5)
+#变量名.lstrip(“”)——删除字符串左边某元素
+str_new6=str_new1.lstrip('1')
+print(str_new6)
+#变量名.rstrip(“”)——删除字符串右边某元素
+str_new7=str_new1.rstrip('2')
+print(str_new7)
+#字符串某元素或某子字符串个数统计——变量名.count()
+str_new8=str_new.count(' ')
+print(str_new8)
+#字符串整体长度——变量名.len()
+str_new9=len(str_new)
+print(str_new9)
+
+#列表
+#定义
+#非空列表
+my_list=['a','b',7,9,46783]
+#空变量
+my_list1=[]
+my_list2=list()
+print(my_list,my_list1,my_list2)
+#相关方法
+#下标索引（不可越界访问）——变量名.index()
+num6=my_list.index('b')
+# 取用某下标表示的值——变量名[]
+letter=my_list[0]
+#修改特定下标的值——变量名[]=赋值
+my_list[4]='my'
+#插入元素——变量名.insert（下标值，插入元素值）
+my_list.insert(3,'love')
+# 追加单个元素至尾部——变量名.append（追加的元素）
+my_list.append('Python')
+#追加多个元素（数据容器）——变量名.extend(其他数据容器)
+my_list3=['I',78,'i o']
+my_list.extend(my_list3)
+#删除元素
+#del变量名[下标值]——直接删除
+del my_list[2]
+#变量名.pop[下标值)取出该元素后删除
+num7=my_list.pop(5)
+#变量名.remove（元素）——删除列表中该元素的第一个匹配项（由前至后）
+my_list.remove(9)
+#清空列表——变量名.clear()
+my_list_new=[15,46,892,9]
+my_list_new=my_list_new.clear()
+#统计某元素个数——变量名.count()
+number=my_list.count('I')
+#统计列表长度——len(变量名)
+number1=len(my_list)
+# 嵌套——下标写法：变量名[][][][][][][]……——[]表示一个层级
+member=my_list[0][0]
+print(num7,letter,my_list,num6,number,number1,member)
+
+#元组
+
+# 定义
+# 非空元组
+my_tuple=(9,7764,78362,' ','ahvgxbs')
+# 空变量
+my_tuple1=()
+my_tuple2=tuple()
+#相关方法
+#index
+num_=my_tuple.index(9)
+num_1=my_tuple.count(9)
+num_2=len(my_tuple)
+print(num_,num_1,num_2,my_tuple)
+
+#练习五 type()语句演练
+
+num8=10
+my_float3=40.8
+my_bool1=True
+my_complex1=8+5j
+print(type(num8),type(my_float3),type(my_bool1),type(my_complex1))
+
+
+#练习四（续集）
+#字典
+#定义
+#非空字典
+#变量名=（key1：dict1……）
+my_dict={1:'wen',2:'xin',3:'xin'}
+#空字典
+my_dict1={}
+my_dict2=dict()
+print(my_dict,my_dict1,my_dict2)
+
+#相关方法
+	#新增元素——变量名[key]=value——key与value都是新增的值
+my_dict[4]='Studying'
+print(my_dict)
+
+#更新（修改）元素——变量名[key]=value——key为已存在的值，value是修改的值
+my_dict[4]='Playing'
+print(my_dict)
+
+# 删除元素——变量名.pop(key)
+my_dict.pop(1)
+print(my_dict)
+
+ #获得全部的key值
+keys=my_dict.keys()
+for key in keys:
+    print(key)
+
+#获得全部的valua值
+for key in keys:
+    print(my_dict[key])
+
+#清空字典
+my_dict.clear()
+print(my_dict)
+
+#集合
+#定义
+#非空集合
+#变量名={…，……}
+my_set={'hei','ma','cheng','xu','yuan',1,4,675}
+#空集合
+my_set1={}
+my_set2=set()
+print(my_set,my_set1,my_set2)
+#相关方法
+#添加新元素——变量名.add（新添加的元素）
+my_set.add('wen')
+print(my_set)
+
+#移除元素——变量名.remove(移除的元素)
+my_set.remove('wen')
+print(my_set)
+
+#取出某元素并删除——变量名.pop(移除的元素)
+num9=my_set.pop()
+print(num9,my_set)
+
+# 取出集合1中存在，但集合2不存在的元素，组成一个新的集合——集合1.difference（集合2）
+my_set_new={'wen','xin','xin','love','studying'}
+my_set_special1=my_set.difference(my_set_new)
+print(my_set_special1)
+
+#将集合1跟集合2合并成一个集合，得到一个新集合——集合1.union(集合2)
+my_set_special2=my_set.union(my_set_new)
+print(my_set_special2)
+
+#统计集合长度——len（变量名）
+num10=len(my_set)
+print(num10)
+
+#将两个集合都存在的元素都储存在集合1中——集合1.diference_update(集合2)
+my_set_special3=my_set.difference_update(my_set_new)
+print(my_set,my_set_special3)
+
+#清空集合——变量名.clear（）
+my_set.clear()
+print(my_set)
+
+
+
+#切片
+string='I love Python , and I enjoy learning it'
+list=[1,2,3,6,7,9,'wen','xin']
+tuple=('wen','xin','xin',1,22,32,54)
+print(string[2:7:2])
+print(list[2:7:2])
+print(tuple[0:3])
+
+#练习五 type类型判断
+num11=3
+my_float4=9.45
+varchar='wenxinixn'
+my_bool4=False
+my_complex4=6+9j
+my_dict5={1:'I',2:'you','wen':67}
+my_set10={'I','love','Python'}
+print(type(num11))
+print(type(my_float4))
+print(type(varchar))
+print(type(my_bool4))
+print(type(my_complex4))
+print(type(my_dict5))
+print(type(my_set10))
+print(type(string))
+print(type(list))
+print(type(tuple))
+
+#练习六 条件控制与循环控制
+#条件控制
+#if语句
+my_num=int(input())
+if my_num>0:
+    print(my_num)
+#if-else语句
+else:
+    print(my_num+100)
+#if-elif-else语句
+my_num_new=int(input())
+if my_num_new>0:
+    print(my_num_new)
+elif my_num_new<0:
+    print(my_num_new+100)
+else:
+    print('quit')
+
+#match-case语句
+match my_num_new:
+    case 1:
+        print('Yes')
+    case 0:
+        print('No')
+    case _:
+        print('quit')
+
+#循环语句
+#while语句
+while my_num_new<0:
+    my_num_new+=1
+#while-else语句
+else :
+    my_num_new-=1
+print(my_num_new)
+
+#for语句
+for line in list:
+    print(line)
+#for-else语句
+else:
+    print('successful')
+#for与range语句
+for i in range(2,15,3):
+    print(i)
+
+#continue与break
+j=100
+while j>0:
+    while my_num_new>0:
+        print(my_num_new)
+        continue
+        print('退出')
+    if j==23:
+        print('退出')
+        break
+        print(j)
+    print(j)
+    j-=1
+#以上循环会出现死循环，演示使用，勿随意操作
+
+#练习七 推导式
+my_list10=[1,2,3,4,5,6,8,87,5,42,3,21,12,1]
+my_list_new=[number for number in my_list10 if number>10]
+print(my_list_new)
+
+#练习八 函数
+def my_function(name,age,gender):
+    print(name,age,gender)
+    return None
+print(my_function('wenxinxin',18,'woman'))
+
+num_new=lambda x,y:x+y
+
+print(num_new(1,5))
