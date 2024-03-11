@@ -1047,7 +1047,7 @@ def dmy2ymd(day):
   	
   	- ```
   		gs=mg.GridSpec(rows,columns)
-  		mp.subplot([:,:])
+  		mp.subplot(,,,)
   		#将各个单元格看成矩阵，进行切片合并
   		```
   	
